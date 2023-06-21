@@ -28,8 +28,7 @@ def mixed_correlation(matrix1, matrix2):
         new_matrix = upper_right
         return new_matrix
 
-    correlation_matrix = np.corrcoef(matrix1.T,
-                                     matrix2.T)  # since I keep the rowval = True, I traspose both variables.
+    correlation_matrix = np.corrcoef(matrix1.T, matrix2.T)  # since I keep the rowval = True, I traspose both variables.
     # It's ok to use .T for the second variable since np.corrcoef already does the conjugation
     correlation_matrix = one_block(correlation_matrix)
 
